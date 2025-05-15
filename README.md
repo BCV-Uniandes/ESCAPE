@@ -10,3 +10,12 @@
 <sup>1</sup><em>Universidad de Los Andes, Colombia</em>
 
 ___________
+
+
+## ESCAPE Database & Benchmark
+
+We curate and unify the ESCAPE Database to enable reliable and reproducible classification of antimicrobial peptides (AMPs). This dataset tackles major challenges in existing AMP collections, such as fragmented data, inconsistent annotations, and limited sample sizes, by compiling over 80,000 peptide sequences from 27 validated public repositories.
+
+
+
+You can access the complete ESCAPE dataset on Harvard Dataverse.
