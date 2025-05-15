@@ -18,4 +18,4 @@ We curate and unify the ESCAPE Database to enable reliable and reproducible clas
 
 
 
-You can access the complete ESCAPE dataset on Harvard Dataverse.
+You can access the complete ESCAPE Database on [Harvard Dataverse](https://doi.org/10.7910/DVN/C69MCD).
