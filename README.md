@@ -107,7 +107,9 @@ To reproduce the evaluation:
 
 **1.	Download trained model checkpoints.** You can download the .pth files for both folds from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing).
 
+
 **2.	Update the script configuration.** Set the correct paths to both checkpoints in the `src/ensemble.sh` script and be sure the model architecture used is **MultiModalClassifier** from `src/model_ensemble.py` file.
+
 
 **3.	Run ensemble evaluation.** Use the following command:
 
