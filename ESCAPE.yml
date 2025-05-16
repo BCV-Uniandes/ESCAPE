@@ -1,0 +1,17 @@
+name: ESCAPE_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10          # o cambia a 3.9/3.11 si lo prefieres
+  - pip
+  - pip:
+      - numpy
+      - torch             # instala la última versión CPU/GPU disponible
+      - scikit-learn      # average_precision_score, roc_auc_score, etc.
+      - tqdm              # barras de progreso
+      - wandb             # Weights & Biases
+      - pandas 
+      - pillow       # provides PIL
+      - timm             # PyTorch Image Models
+
+
