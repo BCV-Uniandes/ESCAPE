@@ -30,7 +30,10 @@ ___________
 
 ## ESCAPE Benchmark
 
-The table below summarizes key methods for antimicrobial peptide classification, their primary architectures, GitHub repositories, and the F1-score and mean Average Precision (mAP) these methods achieve by evaluating them on the ESCAPE dataset.
+
+We evaluate six representative models for antimicrobial peptide classification: **AMPlify, AMP BERT, TransImbAMP, amPEPpy, AMPs Net,** and **PEP Net**, using the multilabel framework defined by ESCAPE. Each model was modified to support multilabel classification and trained with two fold cross validation. We report final performance by averaging predictions from both folds through an ensemble strategy. Evaluation uses two standard metrics for multilabel tasks: F1 score and mean Average Precision, which are suitable for datasets with class imbalance.
+
+The table below summarizes the key methods for antimicrobial peptide classification of the ESCAPE Benchmark, their primary architectures, GitHub repositories, and the F1-score and mean Average Precision (mAP) these methods achieve by evaluating them on the ESCAPE Dataset.
 
 | Method      | Primary Architecture          | GitHub Repository                                             | F1-score (%) | mAP (%) |
 |-------------|-------------------------------|---------------------------------------------------------------|--------------|---------|
@@ -42,5 +45,18 @@ The table below summarizes key methods for antimicrobial peptide classification,
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
 | **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
 
----
+
+
+To reproduce the ESCAPE Benchmark results on the ESCAPE Dataset:
+
+**1.**	Update the paths to both model checkpoints in the `ensemble.sh` executable script.
+
+**2.**	Set the model architecture in the `model_ensemble.py` file.
+
+**3.**	Run the following command:
+
+    ```bash
+    bash ensemble.sh
+    ```
+ ---
 
