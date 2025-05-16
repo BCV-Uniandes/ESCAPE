@@ -59,7 +59,7 @@ git clone https://github.com/BCV-Uniandes/ESCAPE.git
 To set up the environment and install the necessary dependencies, run the following commands:
 
 ```
-conda env create -f ESCAPE.yaml
+conda env create -f ESCAPE.yml
 conda activate ESCAPE_env
 ```
 
