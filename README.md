@@ -26,7 +26,7 @@ The **ESCAPE Dataset** integrates over 80,000 peptide sequences from 27 validate
 
 
 
-The ESCAPE Dataset is publicly available for download. You can access the complete ESCAPE Database on [Harvard Dataverse](https://doi.org/10.7910/DVN/C69MCD).
+The ESCAPE Dataset is available for download. You can access the complete ESCAPE Database on [Harvard Dataverse](https://doi.org/10.7910/DVN/C69MCD).
 
 ___________
 
