@@ -15,10 +15,9 @@ class ESCAPEDataset(Dataset):
     ESCAPE Dataset class.
 
     Args:
-        csv_file (str): Path to CSV with dataset metadata (sequences, map filenames, labels).
         maps_dir (str): Directory containing structural maps (.npy or images).
         seq_max_len (int): Max length for sequence tokenization.
-        split_file (str, optional): CSV file to filter dataset rows by index (e.g. train/test split).
+        test_file (str, optional): Path to CSV with dataset metadata (e.g. train/test split).
 
     Behavior:
         - Computes global min/max for normalization across all .npy maps.
@@ -35,22 +34,16 @@ class ESCAPEDataset(Dataset):
 
     def __init__(
         self, 
-        csv_file: str,
         maps_dir: str,
         seq_max_len: int,
-        split_file: str = None,
+        test_file: str = None,
         global_min: float = None,
         global_max: float = None,
         img_size: int = 224
     ):
+        
+        df = pd.read_csv(test_file)
 
-        df = pd.read_csv(csv_file)
-
-        if split_file is not None:
-            splits = pd.read_csv(split_file)['Sequence'].tolist()
-            df = df.set_index('Sequence').loc[splits].reset_index()
-        df['Hash'] = df['Hash'].fillna('')
-        df[self.LABEL_COLUMNS] = df[self.LABEL_COLUMNS].fillna(0.0)
         self.df = df
         self.maps_dir = maps_dir
         self.seq_max_len = seq_max_len

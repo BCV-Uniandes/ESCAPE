@@ -71,9 +71,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Ensemble evaluation of MultiModalClassifier")
 
     # Dataset & paths
-    parser.add_argument("--csv_file", type=str, default="../data/metadata.csv", help="Path to dataset CSV file")
     parser.add_argument("--maps_dir", type=str, default="../data/struct_maps", help="Directory with structural maps (.npy)")
-    parser.add_argument("--split_file", type=str, default="../data/sequences/Test.csv", help="CSV file listing test split sequences")
+    parser.add_argument("--test_file", type=str, default="../data/Test.csv", help="CSV file listing test split sequences")
 
     # Checkpoints
     parser.add_argument("--checkpoint1", type=str, default="../checkpoints/ESCAPE/OLD_ESCAPE_Fold1.pth", help="Path to first checkpoint")
@@ -124,10 +123,9 @@ def main():
             global_max = M
 
     test_dataset = ESCAPEDataset(
-        csv_file=args.csv_file,
         maps_dir=args.maps_dir,
         seq_max_len=args.seq_max_len,
-        split_file=args.split_file,
+        test_file=args.test_file,
         global_min=global_min,
         global_max=global_max,
         img_size=args.img_size,
