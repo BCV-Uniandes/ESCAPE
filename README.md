@@ -11,7 +11,7 @@
 
 ___________
 
-**ESCAPE** is a standardized experimental framework for multilabel antimicrobial peptide classification. It combines a large-scale curated dataset, a benchmark for evaluating models, and a transformer-based baseline that leverages both sequence and structural information.
+**Expanded Standardized Collection for Antimicrobial Peptide Evaluation (ESCAPE)** is an experimental framework for multilabel antimicrobial peptide classification. It combines a large-scale curated dataset, a benchmark for evaluating models, and a transformer-based baseline that integrates both sequence and structural information.
 ___________
 ## ESCAPE Database
 
@@ -91,13 +91,14 @@ The **ESCAPE Baseline** is a dual-branch transformer architecture designed to cl
 
 ### 🧬 Structural Inputs
 
-For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between C-α atoms in the 3D conformation. These matrices are precomputed for all peptides in the test split and stored as **.npy** files.
+For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between Cα atoms in the 3D conformation. We extract these structures from [UniProt](https://www.uniprot.org/) when available, or predict them using [RosettaFold](https://github.com/RosettaCommons/RoseTTAFold) or [AlphaFold3](https://github.com/google-deepmind/alphafold3/tree/main). The resulting distance matrices are precomputed for all peptides and stored as **.npy files**.
 
 **1. Download distance matrices.** You can download the distance matrices for the test set from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing). 
 
-**2. Set the distance matrix path.** Modify the path to the folder containing the distance matrices in the script.py file to ensure the model can load the correct structural inputs during evaluation.
+**2. Set the distance matrix path.** Modify the path to the folder containing the distance matrices in the test.py file to ensure the model can load the correct structural inputs during evaluation.
 
 
+### 📊 ESCAPE Baseline Evaluation
 
 
 
