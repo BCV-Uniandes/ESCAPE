@@ -45,7 +45,16 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
 | **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
 
+### Getting Started
 
+To reproduce our results, you need to set up the required environment with all dependencies. We provide a Conda environment file (ESCAPE.yaml) to streamline this process. Create the environment by running:
+
+```
+conda env create -f ESCAPE.yaml
+conda activate ESCAPE
+```
+
+### Reproducing ESCAPE Benchmark Results
 
 To reproduce the ESCAPE Benchmark results on the ESCAPE Dataset:
 
@@ -55,8 +64,13 @@ To reproduce the ESCAPE Benchmark results on the ESCAPE Dataset:
 
 **3.**	Run the following command:
 
-    ```bash
-    bash ensemble.sh
-    ```
- ---
+```bash
+bash ensemble.sh
+```
+This script loads both trained models, averages their outputs, and computes the final metrics over the test set.
+
+
+___________
+
+## ESCAPE Baseline
 
