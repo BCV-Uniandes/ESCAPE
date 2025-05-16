@@ -89,7 +89,7 @@ The **ESCAPE Baseline** is a dual-branch transformer architecture designed to cl
 <p align="center">
 <img src="Figures/ArchitectureESCAPEFINAL.png" width="800">
 </p>
-***
+
 ### 🧬 Structural Inputs
 
 For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between Cα atoms in the 3D conformation. We extract these structures from [UniProt](https://www.uniprot.org/) when available, or predict them using [RosettaFold](https://github.com/RosettaCommons/RoseTTAFold) or [AlphaFold3](https://github.com/google-deepmind/alphafold3/tree/main). The resulting distance matrices are precomputed for all peptides and stored as **.npy files**.
