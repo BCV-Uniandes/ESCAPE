@@ -40,10 +40,10 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 | Method      | Primary Architecture          | GitHub Repository                                             | F1-score (%) | mAP (%) |
 |-------------|-------------------------------|---------------------------------------------------------------|--------------|---------|
 | Amps-Net    | GCN                           | [GitHub](https://github.com/BCV-Uniandes/AMPs-Net)            | 57.7         | 54.2    |
-| TranslmbAMP | Transformer                   | [GitHub](https://github.com/BiOmicsLab/TransImbAMP)           | 61.9         | 64.9    |
+| TranslmbAMP | Transformer-Based                   | [GitHub](https://github.com/BiOmicsLab/TransImbAMP)           | 61.9         | 64.9    |
 | AMP-BERT    | BERT                          | [GitHub](https://github.com/GIST-CSBL/AMP-BERT)               | 66.1         | 66.2    |
 | amPEPpy     | Random Forest (RF)            | [GitHub](https://github.com/tlawrence3/amPEPpy)               | 65.0         | 68.0    |
-| PEP-Net     | Transformer                   | [GitHub](https://github.com/hjy23/PepNet)                     | 65.2         | 68.2    |
+| PEP-Net     | Transformer-Based                   | [GitHub](https://github.com/hjy23/PepNet)                     | 65.2         | 68.2    |
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
 | **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
 
