@@ -83,7 +83,7 @@ ___________
 
 ## ESCAPE Baseline
 
-The **ESCAPE Baseline** is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach leads to state-of-the-art performance on the ESCAPE Benchmark across multiple AMP functional classes.
+The **ESCAPE Baseline** is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach achieves state-of-the-art overall performance on the ESCAPE Benchmark, outperforming existing methods in both F1-score and mean Average Precision.
 
 <p align="center">
 <img src="Figures/Archutecture_ESCAPE.png" width="800">
@@ -100,6 +100,13 @@ For the structural branch, each peptide is represented as a 224×224 distance ma
 
 ### 📊 ESCAPE Baseline Evaluation
 
+We evaluate the **ESCAPE Baseline** on the **ESCAPE Benchmark** using two standard metrics for multilabel classification: F1-score and mean Average Precision (mAP). This model achieves state-of-the-art overall performance, outperforming six existing AMP classifiers across both metrics.
+
+To reproduce the evaluation:
+
+**1.	Download trained model checkpoints.** You can download the .pth files for both folds from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing).
+**2.	Update the script configuration.** Set the correct paths to both checkpoints in the ensemble.sh script and specify the model architecture in the model_ensemble.py file.
+**3.	Run ensemble evaluation.** Use the following command:
 
 
 ## Website License
