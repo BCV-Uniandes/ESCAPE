@@ -11,9 +11,11 @@
 
 ___________
 
+**ESCAPE** is a standardized experimental framework for multilabel antimicrobial peptide classification. It combines a large-scale curated dataset, a benchmark for evaluating models, and a transformer-based baseline that leverages both sequence and structural information.
+___________
 ## ESCAPE Database
 
-ESCAPE is an experimental framework that integrates over 80,000 peptide sequences from 27 validated repositories. It addresses key limitations of existing AMP resources, including data fragmentation, inconsistent annotations, and limited dataset size, by separating antimicrobial peptides from negative sequences and organizing their functional annotations into a biologically coherent multilabel hierarchy that spans antibacterial, antifungal, antiviral, and antiparasitic activities. The dataset comprises 21,409 experimentally validated AMPs and 60,950 non-AMPs filtered from unrelated sources.
+The **ESCAPE Dataset** integrates over 80,000 peptide sequences from 27 validated public repositories to address critical limitations in existing AMP resources, including data fragmentation, inconsistent annotations, and limited functional coverage. It distinguishes antimicrobial peptides from negative sequences and organizes their functional annotations into a biologically meaningful multilabel hierarchy, covering antibacterial, antifungal, antiviral, and antiparasitic activities.The dataset comprises 21,409 experimentally validated AMPs and 60,950 non-AMPs filtered from unrelated sources.
 
 
 
@@ -47,7 +49,7 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 
 ### Getting Started
 
-To reproduce our results, you need to set up the required environment with all dependencies. We provide a Conda environment file (ESCAPE.yaml) to streamline this process. Create the environment by running:
+To reproduce our results, you need to set up the required environment with all dependencies. We provide a Conda environment file to streamline this process. Create the environment by running:
 
 ```
 conda env create -f ESCAPE.yaml
@@ -56,7 +58,7 @@ conda activate ESCAPE
 
 ### Reproducing ESCAPE Benchmark Results
 
-To reproduce the ESCAPE Benchmark results on the ESCAPE Dataset:
+To reproduce the **ESCAPE Benchmark** results on the ESCAPE Dataset:
 
 **1.**	Update the paths to both model checkpoints in the `ensemble.sh` executable script.
 
@@ -74,7 +76,7 @@ ___________
 
 ## ESCAPE Baseline
 
-The ESCAPE Baseline is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach leads to state-of-the-art performance on the ESCAPE Benchmark across multiple AMP functional classes.
+The **ESCAPE Baseline** is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach leads to state-of-the-art performance on the ESCAPE Benchmark across multiple AMP functional classes.
 
 <p align="center">
 <img src="Figures/Archutecture_ESCAPE.png" width="800">
@@ -85,3 +87,11 @@ The ESCAPE Baseline is a dual-branch transformer architecture designed to classi
 For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between C-alpha atoms in the 3D conformation. These matrices are precomputed for all peptides in the test split and stored as **.npy** files.
 
 You can download the distance matrices for the test set from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing). Place the .npy files in the appropriate directory as specified in the code before running evaluation.
+
+
+
+
+## Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+
