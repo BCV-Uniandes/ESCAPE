@@ -47,16 +47,23 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
 | **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
 
-### Getting Started
+### 📦 Getting Started
 
-To reproduce the results, you need to set up the required environment with all dependencies. We provide a Conda environment file to streamline this process. Create the environment by running:
+
+**1. Clone the ESCAPE repository.**
+```
+git clone https://github.com/BCV-Uniandes/ESCAPE.git
+```
+
+**2. Install general dependencies.** 
+To set up the environment and install the necessary dependencies, run the following commands:
 
 ```
 conda env create -f ESCAPE.yaml
-conda activate ESCAPE
+conda activate ESCAPE_env
 ```
 
-### Reproducing ESCAPE Benchmark Results
+### 🧪 Reproducing ESCAPE Benchmark Results
 
 To reproduce the **ESCAPE Benchmark** results on the ESCAPE Dataset:
 
@@ -82,11 +89,14 @@ The **ESCAPE Baseline** is a dual-branch transformer architecture designed to cl
 <img src="Figures/Archutecture_ESCAPE.png" width="800">
 </p>
 
-### Structural Inputs
+### 🧬 Structural Inputs
 
-For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between C-alpha atoms in the 3D conformation. These matrices are precomputed for all peptides in the test split and stored as **.npy** files.
+For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between C-α atoms in the 3D conformation. These matrices are precomputed for all peptides in the test split and stored as **.npy** files.
 
-You can download the distance matrices for the test set from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing). Place the .npy files in the appropriate directory as specified in the code before running evaluation.
+**1. Download distance matrices.** You can download the distance matrices for the test set from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing). 
+
+**2. Set the distance matrix path.** Modify the path to the folder containing the distance matrices in the script.py file to ensure the model can load the correct structural inputs during evaluation.
+
 
 
 
