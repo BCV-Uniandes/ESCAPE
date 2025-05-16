@@ -1,9 +1,8 @@
 DEVICE=0
 
 CUDA_VISIBLE_DEVICES=$DEVICE python test_ESCAPE.py \
-  --csv_file ../data/metadata.csv \
   --maps_dir ../data/struct_maps \
-  --split_file ../data/sequences/Test.csv \
+  --test_file ../data/sequences/Test.csv \
   --checkpoint1 ../checkpoints/ESCAPE/OLD_ESCAPE_Fold1.pth \
   --checkpoint2 ../checkpoints/ESCAPE/OLD_ESCAPE_Fold2.pth \
   --batch_size 64 \
