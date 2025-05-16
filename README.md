@@ -45,7 +45,7 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 | amPEPpy     | Random Forest (RF)            | [GitHub](https://github.com/tlawrence3/amPEPpy)               | 65.0         | 68.0    |
 | PEP-Net     | Transformer-Based                   | [GitHub](https://github.com/hjy23/PepNet)                     | 65.2         | 68.2    |
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
-| **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
+| **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.5**     | **72.7**|
 
 ***
 ### 📦 Getting Started
