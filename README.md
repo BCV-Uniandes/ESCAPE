@@ -70,7 +70,7 @@ To reproduce the **ESCAPE Benchmark** results on the ESCAPE Dataset:
 
 **1.**	Update the paths to both model checkpoints in the `src/ensemble.sh` executable script.
 
-**2.**	Set the model architecture in the `model_ensemble.py` file.
+**2.**	Set the model architecture in the `test_ESCAPE.py` file.
 
 **3.**	Run the following command:
 
@@ -106,7 +106,7 @@ We evaluate the **ESCAPE Baseline** on the **ESCAPE Benchmark** using two standa
 **1.	Download trained model checkpoints.** You can download the .pth files for both folds from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing).
 
 
-**2.	Update the script configuration.** Set the correct paths to both checkpoints in the `src/ensemble.sh` script and be sure you are using the **MultiModalClassifier** architecture from `src/model_ensemble.py` file.
+**2.	Update the script configuration.** Set the correct paths to both checkpoints in the src/ensemble.sh script, and ensure that the **MultiModalClassifier** architecture from `src/models.py` is properly initialized in `src/test_ESCAPE.py`.
 
 
 **3.	Run ensemble evaluation.** Use the following command:
