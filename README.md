@@ -47,6 +47,7 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 | AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
 | **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.4**     | **72.7**|
 
+***
 ### 📦 Getting Started
 
 
@@ -62,7 +63,7 @@ To set up the environment and install the necessary dependencies, run the follow
 conda env create -f ESCAPE.yml
 conda activate ESCAPE_env
 ```
-
+***
 ### 🧪 Reproducing ESCAPE Benchmark Results
 
 To reproduce the **ESCAPE Benchmark** results on the ESCAPE Dataset:
@@ -88,7 +89,7 @@ The **ESCAPE Baseline** is a dual-branch transformer architecture designed to cl
 <p align="center">
 <img src="Figures/Archutecture_ESCAPE.png" width="800">
 </p>
-
+***
 ### 🧬 Structural Inputs
 
 For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between Cα atoms in the 3D conformation. We extract these structures from [UniProt](https://www.uniprot.org/) when available, or predict them using [RosettaFold](https://github.com/RosettaCommons/RoseTTAFold) or [AlphaFold3](https://github.com/google-deepmind/alphafold3/tree/main). The resulting distance matrices are precomputed for all peptides and stored as **.npy files**.
@@ -97,7 +98,7 @@ For the structural branch, each peptide is represented as a 224×224 distance ma
 
 **2. Set the distance matrix path.** Modify the path to the folder containing the distance matrices in the test.py file to ensure the model can load the correct structural inputs during evaluation.
 
-
+***
 ### 📊 ESCAPE Baseline Evaluation
 
 We evaluate the **ESCAPE Baseline** on the **ESCAPE Benchmark** using two standard metrics for multilabel classification: F1-score and mean Average Precision (mAP). This model achieves state-of-the-art overall performance, outperforming six existing AMP classifiers across both metrics.
