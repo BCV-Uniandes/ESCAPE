@@ -74,3 +74,14 @@ ___________
 
 ## ESCAPE Baseline
 
+The ESCAPE Baseline is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach leads to state-of-the-art performance on the ESCAPE Benchmark across multiple AMP functional classes.
+
+<p align="center">
+<img src="Figures/Archutecture_ESCAPE.png" width="800">
+</p>
+
+### Structural Inputs
+
+For the structural branch, each peptide is represented as a 224×224 distance matrix, where each element corresponds to the Euclidean distance between C-alpha atoms in the 3D conformation. These matrices are precomputed for all peptides in the test split and stored as **.npy** files.
+
+You can download the distance matrices for the test set from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing). Place the .npy files in the appropriate directory as specified in the code before running evaluation.
