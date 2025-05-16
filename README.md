@@ -49,7 +49,7 @@ The table below summarizes the key methods for antimicrobial peptide classificat
 
 ### Getting Started
 
-To reproduce our results, you need to set up the required environment with all dependencies. We provide a Conda environment file to streamline this process. Create the environment by running:
+To reproduce the results, you need to set up the required environment with all dependencies. We provide a Conda environment file to streamline this process. Create the environment by running:
 
 ```
 conda env create -f ESCAPE.yaml
