@@ -68,14 +68,14 @@ conda activate ESCAPE_env
 
 To reproduce the **ESCAPE Benchmark** results on the ESCAPE Dataset:
 
-**1.**	Update the paths to both model checkpoints in the `ensemble.sh` executable script.
+**1.**	Update the paths to both model checkpoints in the `src/ensemble.sh` executable script.
 
 **2.**	Set the model architecture in the `model_ensemble.py` file.
 
 **3.**	Run the following command:
 
 ```bash
-bash ensemble.sh
+bash src/ensemble.sh
 ```
 This script loads both trained models, averages their outputs, and computes the final metrics over the test set.
 
@@ -106,9 +106,14 @@ We evaluate the **ESCAPE Baseline** on the **ESCAPE Benchmark** using two standa
 To reproduce the evaluation:
 
 **1.	Download trained model checkpoints.** You can download the .pth files for both folds from this [link](https://drive.google.com/drive/folders/1e30YX0eztjauwTM5EJ00me-2JS_0iYSF?usp=sharing).
-**2.	Update the script configuration.** Set the correct paths to both checkpoints in the ensemble.sh script and specify the model architecture in the model_ensemble.py file.
+
+**2.	Update the script configuration.** Set the correct paths to both checkpoints in the `src/ensemble.sh` script and be sure the model architecture used is **MultiModalClassifier** from `src/model_ensemble.py` file.
+
 **3.	Run ensemble evaluation.** Use the following command:
 
+```bash
+bash src/ensemble.sh
+```
 
 ## Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
