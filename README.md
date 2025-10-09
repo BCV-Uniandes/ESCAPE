@@ -87,7 +87,7 @@ ___________
 The **ESCAPE Baseline** is a dual-branch transformer architecture designed to classify antimicrobial peptides (AMPs) using both sequence and structural information. It processes amino acid sequences through a transformer encoder and structural representations through a second branch that encodes peptide distance matrices. These two modalities are fused using a bidirectional cross-attention mechanism, enabling the model to capture both biological context and spatial structure. This approach achieves state-of-the-art overall performance on the ESCAPE Benchmark, outperforming existing methods in both F1-score and mean Average Precision.
 
 <p align="center">
-<img src="Figures/imageArchitecture.png" width="800">
+<img src="Figures/architectureFigureEscape.png" width="800">
 </p>
 
 ### 🧬 Structural Inputs
