@@ -1,16 +1,24 @@
 # ESCAPE: A Standardized Benchmark for Multilabel Antimicrobial Peptide Classification
 
+
+[![Paper](https://img.shields.io/badge/NeurIPS-2025-blue)](https://openreview.net/forum?id=MDHl5LCcka)
+[![License: CC BY NC](https://img.shields.io/badge/License-CC_BY_NC-red.svg)](./DATDATASET_LICENSE)
+[![Project Website](https://img.shields.io/badge/Project_Website-ESCAPE-green)](https://bcv-uniandes.github.io/escape-wp/)
+
+
+
 <table>
     <tr>
         <td>
-            Sebastian Ojeda<sup>1</sup>, Rafael Velasquez<sup>1</sup>, Nicolás Aparicio<sup>1</sup>, Juanita Puentes<sup>1</sup>, Paula Cárdenas<sup>1</sup>, Nicolás Andrade<sup>1</sup>, Gabriel González<sup>1</sup>, Sergio Rincón<sup>1</sup>, Carolina Muñoz-Camargo<sup>1</sup> and, Pablo Arbeláez<sup>1</sup>
+            Sebastian Ojeda, Rafael Velasquez, Nicolás Aparicio, Juanita Puentes, Paula Cárdenas, Nicolás Andrade, Gabriel González, Sergio Rincón, Carolina Muñoz-Camargo and, Pablo Arbeláez
         </td>
     </tr>
 </table>
-<sup>1</sup><em>Universidad de Los Andes, Colombia</em>
+<em>Universidad de Los Andes, Colombia</em>
+
+
 
 ___________
-
 **Expanded Standardized Collection for Antimicrobial Peptide Evaluation (ESCAPE)** is an experimental framework for multilabel antimicrobial peptide classification. It combines a large-scale curated dataset, a benchmark for evaluating models, and a transformer-based baseline that integrates both sequence and structural information.
 ___________
 ## ESCAPE Database
