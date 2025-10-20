@@ -41,19 +41,20 @@ ___________
 ## ESCAPE Benchmark
 
 
-We evaluate six representative models for antimicrobial peptide classification: **AMPlify, AMP BERT, TransImbAMP, amPEPpy, AMPs Net,** and **PEP Net**, using the multilabel framework defined by ESCAPE. Each model was modified to support multilabel classification and trained with two fold cross validation. We report final performance by averaging predictions from both folds through an ensemble strategy. Evaluation uses two standard metrics for multilabel tasks: F1 score and mean Average Precision, which are suitable for datasets with class imbalance.
+We evaluate eight representative models for antimicrobial peptide classification: **AMPlify, AMP BERT, TransImbAMP, amPEPpy, AMPs Net, AVP-IFT, PEP Net** and the **ESCAPE Baseline**, using the multilabel framework defined by the ESCAPE Benchmark. Each model was modified to support multilabel classification and trained with two fold cross validation. We report final performance by averaging predictions from both folds through an ensemble strategy. Evaluation uses two standard metrics for multilabel tasks: F1 score and mean Average Precision, which are suitable for datasets with class imbalance.
 
 The table below summarizes the key methods for antimicrobial peptide classification of the ESCAPE Benchmark, their primary architectures, GitHub repositories, and the F1-score and mean Average Precision (mAP) these methods achieve by evaluating them on the ESCAPE Dataset.
 
 | Method      | Primary Architecture          | GitHub Repository                                             | F1-score (%) | mAP (%) |
 |-------------|-------------------------------|---------------------------------------------------------------|--------------|---------|
-| Amps-Net    | GCN                           | [GitHub](https://github.com/BCV-Uniandes/AMPs-Net)            | 57.7         | 54.2    |
-| TranslmbAMP | Transformer-Based                   | [GitHub](https://github.com/BiOmicsLab/TransImbAMP)           | 61.9         | 64.9    |
-| AMP-BERT    | BERT                          | [GitHub](https://github.com/GIST-CSBL/AMP-BERT)               | 66.1         | 66.2    |
-| amPEPpy     | Random Forest (RF)            | [GitHub](https://github.com/tlawrence3/amPEPpy)               | 65.0         | 68.0    |
-| PEP-Net     | Transformer-Based                   | [GitHub](https://github.com/hjy23/PepNet)                     | 65.2         | 68.2    |
-| AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.9         | 71.1    |
-| **ESCAPE**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.5**     | **72.7**|
+| Amps-Net    | GCN                           | [GitHub](https://github.com/BCV-Uniandes/AMPs-Net)            | 57.7 &plusmn; 0.70         | 54.6 &plusmn; 0.86    |
+| TranslmbAMP | Transformer-Based                   | [GitHub](https://github.com/BiOmicsLab/TransImbAMP)           | 62.0 &plusmn; 0.70         | 64.9 &plusmn; 1.11    |
+| AMP-BERT    | BERT                          | [GitHub](https://github.com/GIST-CSBL/AMP-BERT)               | 64.7 &plusmn; 0.64         | 66.9 &plusmn; 1.17    |
+| amPEPpy     | Random Forest (RF)            | [GitHub](https://github.com/tlawrence3/amPEPpy)               | 66.5 &plusmn; 0.37         | 68.5 &plusmn; 0.48    |
+| PEP-Net     | Transformer-Based                   | [GitHub](https://github.com/hjy23/PepNet)                     | 65.5 &plusmn; 0.61         | 68.4 &plusmn; 0.53    |
+| AVP-IFT     | Contrastive-Learning + Transformer | [GitHub](https://github.com/GGCL7/AVP-IFT?tab=readme-ov-file)                    | 66.5 &plusmn; 0.59         | 68.8 &plusmn; 0.50    |
+| AMPlify     | Bi-LSTM with attention layers | [GitHub](https://github.com/bcgsc/AMPlify)                    | 68.5 &plusmn; 0.77         | 70.3 &plusmn; 0.87    |
+| **ESCAPE Baseline (ours)**  | Dual-branch transformer       | [GitHub](https://github.com/BCV-Uniandes/ESCAPE)              | **69.8 &plusmn; 0.43**     | **72.1 &plusmn; 0.60**|
 
 ***
 ### 📦 Getting Started
