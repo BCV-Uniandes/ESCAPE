@@ -124,6 +124,22 @@ We evaluate the **ESCAPE Baseline** on the **ESCAPE Benchmark** using two standa
 bash src/ensemble.sh
 ```
 
+## 🔧 Training ESCAPE Baseline 
+
+To reproduce the training procedure for the ESCAPE Baseline, this repository provides the complete training pipeline, including argument handling, model initialization, and data loading. All input paths and training parameters are defined in `src/args.py`, and are passed through the executable script `src/train.sh`. These arguments include the locations of the ESCAPE CSV files, the directory containing the structural distance matrices, optimization settings, and the model configuration.
+
+**1.** Set the training arguments in `src/args.py`. This file defines all required parameters, including learning rate, batch size, number of epochs, and output directories. The model is selected through the `--mode` argument, which supports three options: `sequence` (sequence-only transformer), `distance` (distance-matrix transformer), and `MultiModal` (dual-branch architecture used as the baseline).
+
+**2.** Modify the `src/train.sh` script to provide the correct paths to the ESCAPE training, validation, and test partitions, as well as the folder containing the 224×224 structural matrices. Any additional argument defined in `args.py` may also be adjusted directly from this script.
+
+**3.** Run the following command to execute training:
+
+```bash
+bash src/train.sh
+```
+___________
+
+
 ## Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
